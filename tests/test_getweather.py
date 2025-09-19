@@ -2,7 +2,7 @@ import pytest
 
 from services.weather_api import get_weather
 
-def test_service(city):
+def test_service():
     data=get_weather('Palermo')
 
     
