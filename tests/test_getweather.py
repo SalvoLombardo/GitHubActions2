@@ -10,3 +10,5 @@ def test_service(city):
     assert data["city"]=="Palermo"
     assert "temp" in data
     assert "description" in data
+
+#
