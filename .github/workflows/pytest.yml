@@ -1,0 +1,24 @@
+name: Pytest
+
+on: 
+  push:
+
+jobs:
+  pytest:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checout Repo
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+
+      - name: install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Esegui pytest
+        uses: pytest -v
+      
